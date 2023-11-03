@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Website Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav li {
+            display: inline;
+            margin: 10px;
+        }
+        main {
+            padding: 20px;
+        }
+        .team-member {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .team-member:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Our Company</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>About Us</h2>
+            <p>Welcome to our company. We are a team of dedicated professionals...</p>
+        </section>
+        <section>
+            <h2>Meet the Team</h2>
+            <div class="team-member" onclick="toggleName(this)">
+                <span class="name">Aayush stha</span>
+                - CEO
+            </div>
+            <div class="team-member" onclick="toggleName(this)">
+                <span class="name">Jane Smith</span>
+                - CTO
+            </div>
+            <div class="team-member" onclick="toggleName(this)">
+                <span class="name">David Johnson</span>
+                - CFO
+            </div>
+        </section>
+    </main>
+    <script>
+        function toggleName(element) {
+            const name = element.querySelector('.name');
+            name.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
